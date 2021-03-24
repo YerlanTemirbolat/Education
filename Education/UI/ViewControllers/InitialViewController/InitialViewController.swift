@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InitialViewController.swift
 //  Education
 //
 //  Created by Admin on 3/10/21.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
     
     private lazy var registrationButton: UIButton = {
         let button = UIButton()
-        button.setTitle("План обучения", for: .normal)
+        button.setTitle(CommonStrings.studyPlanTitle.localized, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.9504194856, green: 0.9562203288, blue: 0.9692490697, alpha: 1)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 27
@@ -26,19 +26,15 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(registrationButton)
         
-        //navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        //navigationController?.navigationBar.shadowImage = UIImage()
-        //navigationController?.navigationBar.isTranslucent = true
-        
-        setViewConstraints()
+        setConstraints()
     }
     
     @objc func didTapButton() {
-        let rootVC = SecondViewController()
+        let rootVC = StudyPlanViewController()
         navigationController?.pushViewController(rootVC, animated: true)
     }
     
-    func setViewConstraints() {
+    func setConstraints() {
         
         NSLayoutConstraint.activate([
             registrationButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),

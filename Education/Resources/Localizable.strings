@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Education
+
+  Created by Admin on 20.03.2021.
+  
+*/
+
+"common.lessonTitle" = "Название дисциплины";
+"common.classLessonsTitle" = "Аудитoрные занятия в часах";
+"common.studyPlanTitle" = "План обучения";
+"common.individualPlan" = "Индивидуальный учебный план";
+"common.studyYear20182019" = "2018-2019 учебный год";
